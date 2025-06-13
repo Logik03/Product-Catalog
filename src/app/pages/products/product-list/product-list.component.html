@@ -1,0 +1,21 @@
+<app-product-filter (filtersChanged)="applyFilters($event)"></app-product-filter>
+
+@if (filtered().length > 0) {
+  <div class="products-grid">
+    @for (product of filtered(); track product.id) {
+      <app-product-card [product]="product" (editProduct)="openEditModal($event)"></app-product-card>
+    }
+  </div>
+} @else {
+    <div class="no-products-container">
+        <div class="card no-product-card">
+          <div class="card-body">
+            <div class="no-product-content">
+              <i class="fas fa-search no-product-icon"></i>
+              <h2>No Products Found</h2>
+              <p>No products match your current search criteria. Try adjusting your filters or search terms.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+}

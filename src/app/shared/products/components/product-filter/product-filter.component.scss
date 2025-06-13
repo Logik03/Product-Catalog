@@ -1,0 +1,52 @@
+.filter-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 0;
+  }
+  
+  .filter-form input,
+  .filter-form select {
+    font-size: 1rem;
+    padding: 0.65rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background-color: #fff;
+    color: #111827;
+    transition: all 0.3s ease;
+    appearance: none;
+    outline: none;
+  
+    &:focus {
+      border-color: #6366f1;
+      box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    }
+  }
+  
+  .search-input {
+    width: 300px;
+  }
+  
+  .filter-select,
+  .category-select {
+    width: 200px;
+  }
+  
+  .price-range-inputs {
+    display: flex;
+    gap: 1rem;
+  
+    .price-input {
+      width: 150px;
+    }
+  }
+
+  select {
+    background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 1rem;
+  }
+  

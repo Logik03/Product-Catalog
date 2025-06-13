@@ -1,0 +1,22 @@
+.edit-form {
+    .form-label {
+      font-weight: 500;
+    }
+  
+    .form-control.ng-invalid.ng-touched {
+      border-color: #dc3545;
+    }
+  
+    .text-danger {
+      font-size: 0.875rem;
+    }
+  
+    .btn {
+      min-width: 100px;
+    }
+  
+    .modal-body {
+      padding: 1rem 1.5rem;
+    }
+  }
+  

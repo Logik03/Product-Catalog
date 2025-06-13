@@ -1,0 +1,43 @@
+@if (product(); as prod) {
+    <div class="card">
+      <div class="card-header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike" class="brand-logo" />
+        <i class="fas fa-shopping-cart cart-icon"></i>
+      </div>
+      <div class="category-badge">{{ prod.category }}</div>
+  
+      <div class="product-image">
+        <img [src]="prod.imageUrl" alt="{{ prod.name }}" />
+      </div>
+  
+      <div class="card-body">
+        <h2>{{ prod.name }}</h2>
+        <p>{{ prod.description }}</p>
+  
+        <div class="info-row">
+          @if (prod.colors?.length) {
+            <div class="color-section">
+              <label>Color:</label>
+              <div class="colors">
+                @for (color of prod.colors; track color) {
+                  <div
+                    class="color-dot"
+                    [ngStyle]="{ 'background-color': color }"
+                    [class.selected]="color === selectedColor"
+                    (click)="selectColor(color)"
+                  ></div>
+                }
+              </div>
+            </div>
+          }
+  
+          <div class="price">${{ prod.price }}</div>
+        </div>
+  
+        <div class="actions">
+          <button class="add-to-cart" (click)="onAddToCart()">Add To Cart</button>
+          <button class="edit-btn" (click)="onEditProduct(prod)">Edit</button>
+        </div>
+      </div>
+    </div>
+  }
